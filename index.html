@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniero Joel Florentino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.3), transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.15), transparent 40%);
+            background-size: cover;
+            background-blend-mode: screen;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.3em;
+            text-align: justify;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            line-height: 1.6;
+        }
+        img { 
+            width: 180px;
+            height: 180px;
+            border: 5px solid rgba(255, 0, 0, 0.8);
+            margin-bottom: 20px;
+            margin-top: 40px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            border-radius: 50ch;
+        }
+        img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+        .content-box {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            margin: 20px auto;
+            width: 80%;
+        }
+        .social-buttons {
+            margin-top: 30px;
+        }
+        .social-button {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            color: white;
+        }
+        .social-button img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            border: 3px solid rgba(255, 0, 0, 0.6);
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+        .social-button img:hover {
+            transform: rotate(360deg);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+        .social-button a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-button a:hover {
+            color: yellow;
+        }
+        .social-button .logo-text {
+            margin-bottom: 10px;
+        }
+        .logo-section {
+            margin-top: 50px;
+        }
+        .logo-section img {
+            width: 700px; 
+            height: 420px; 
+            border: 5px solid rgba(255, 0, 0, 0.8); 
+            border-radius: 0; 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+        .logo-section img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+        }
+        .logo-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.7em;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7);
+        }
+        nav {
+            margin-top: 30px;
+            background-color: rgba(255, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: yellow;
+        }
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+        .divider {
+            display: inline-block;
+            width: 30px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8em; 
+            color: white;
+            text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.7);
+            position: fixed;
+            bottom: 10px;
+            left: 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .footer img {
+            width: 40px; 
+            height: 30px; 
+            border-radius: 0%;
+            border: none;
+            margin-right: 1300px; 
+        }
+
+       
+        .audio-control {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 0, 0, 0.8);
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            transition: background-color 0.3s ease;
+        }
+        .audio-control:hover {
+            background-color: rgba(255, 0, 0, 1);
+        }
+        @media (max-width: 768px) {
+
+            nav a {
+                font-size: 1em; /* Tamaño de fuente más pequeño para móviles */
+        margin: 10px 0; /* Espacio horizontal entre enlaces en móviles */
+    }
+    h1 {
+        font-size: 1em; /* Ajustar el tamaño de la fuente del título */
+        margin: 10px 0; /* Agregar margen para mejor separación */
+    }
+    p {
+        font-size: 1em; /* Ajustar el tamaño de la fuente */
+        margin: 5px 0; /* Agregar márgenes para un mejor espaciado */
+        line-height: 1.4; /* Mejorar la legibilidad del texto */
+    }
+    img {
+        width: 90%; /* Hacer la imagen más pequeña */
+        height: auto; /* Mantener la proporción */
+    }
+    .logo-section img {
+        width: 100%; /* Asegurarse de que la imagen del logo se ajuste */
+        height: auto; /* Mantener la proporción */
+    }
+    nav a {
+        font-size: 0.6em; /* Ajustar el tamaño de la fuente */
+        padding: 0 3px; /* Agregar un poco de padding para mejorar la separación */
+    }
+    .content-box {
+        width: 80%; /* Hacer la caja de contenido más estrecha */
+        padding: 10px; /* Ajustar el padding */
+        font-size: 0.6em; /* Reducir el tamaño de la fuente en la caja de contenido */
+    }
+    .social-buttons {
+        font-size: 0.9em; /* Hacer el tamaño de fuente más pequeño para las redes sociales */
+    }
+    .social-button {
+        margin: 10px; /* Reducir el margen entre botones */
+    }
+    .footer {
+        display: block; /* Asegurarse de que el footer se muestre correctamente */
+        text-align: center; /* Centrar el contenido del footer */
+    }
+    .footer img {
+        margin: 0 auto; /* Centrar la imagen del footer */
+        width: 30px; /* Ajustar el tamaño de la imagen del footer */
+        height: 20px; /* Ajustar el tamaño de la imagen del footer */
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5em; /* Tamaño de fuente para tabletas */
+    }
+    p {
+        font-size: 1.1em; /* Tamaño de fuente para tabletas */
+    }
+    .content-box {
+        width: 90%; /* Ancho de la caja de contenido */
+    }
+    .social-buttons {
+        font-size: 1em; /* Tamaño de fuente para redes sociales */
+    }
+    .social-button {
+        margin: 15px; /* Margen entre botones */
+    }
+}
+    </style>
+</head>
+<body>
+    <img src="joelweb.png" alt="Imagen de Joel Florentino" style="width:50%; height:auto;">
+    <nav>
+        <a href="#about" class="glow">Sobre mí.</a><span class="divider">|</span>
+        <a href="#social" class="glow">Redes sociales.</a><span class="divider">|</span>
+        <a href="#logo" class="glow">Mi logo.</a>
+    </nav>
+
+    <img src="ale.jpeg" alt="Foto de Ingeniero Joel Florentino">
+    <h1 id="about" class="glow">Datos sobre el Ingeniero Joel Florentino.</h1>
+    
+    <div class="content-box">
+        <p>Soy Joel Alexander Florentino Terrero, un ingeniero de sistemas con un sólido conocimiento en varias tecnologías y lenguajes de programación, incluyendo SQL, Python, HTML, C++, y programación en C. Tengo experiencia en la programación de dispositivos móviles y me destaco por mi habilidad para crear inventos desde cero.</p>
+        <p>Además, tengo conocimientos en el desarrollo de juegos utilizando Unity, lo que refleja mi pasión por la tecnología y la innovación. Uno de mis pasatiempos es jugar, lo que complementa mi interés en el desarrollo de videojuegos.</p>
+        <p>También soy un editor competente y utilizo diversas herramientas de edición, como PicsArt, Adobe Photoshop, Filmora, y Clipchamp. Dominar el paquete de Office es algo que hago con confianza en mi trabajo diario.</p>
+        <p>Actualmente, estoy ampliando mis horizontes académicos al estudiar marketing y ciberseguridad, lo que me permite fusionar mi conocimiento técnico con una perspectiva empresarial y de seguridad de la información.</p>
+    </div>
+    
+    <div id="social" class="social-buttons">
+        <div class="social-button">
+            <div class="logo-text">Facebook.</div>
+            <a href="https://web.facebook.com/Yosoyalex09/" target="_blank">
+                <img src="face.png" alt="Facebook Logo">
+            </a>
+        </div>
+        <div class="social-button">
+            <div class="logo-text">Instagram.</div>
+            <a href="https://www.instagram.com/night_nine09/" target="_blank">
+                <img src="insta.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </div>
+
+    <div id="logo" class="logo-section">
+        <h2>Mi logo.</h2>
+        <img src="A❤️.png" alt="Logo empresarial de Joel Florentino">
+    </div>
+
+    <footer class="footer">
+        <img src="domi.png" alt="Bandera de República Dominicana">
+        <div id="current-time"></div>
+    </footer>
+
+    <button class="audio-control" onclick="toggleAudio()">Reproducir▶️</button>
+
+    <audio id="background-music" loop>
+        <source src="Norgami.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const audioButton = document.querySelector('.audio-control');
+        let isPlaying = false;
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                audioButton.textContent = 'Reproducir.▶️';
+            } else {
+                audio.play();
+                audioButton.textContent = 'Pausar.⏯️';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            timeElement.textContent = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
